@@ -27,14 +27,14 @@ namespace WpfCalculette
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            double dblNb1;
-            double dblNb2;
+            double dblNumber1;
+            double dblNumber2;
             double dblResponse;
 
-            dblNb1 = Convert.ToInt32(tbxNumber1.Text);
-            dblNb2 = Convert.ToInt32(tbxNumber2.Text);
+            dblNumber1 = Convert.ToInt32(tbxNumber1.Text);
+            dblNumber2 = Convert.ToInt32(tbxNumber2.Text);
 
-            dblResponse = dblNb1 + dblNb2;
+            dblResponse = dblNumber1 + dblNumber2;
             lblResponse.Content = dblResponse.ToString();
         }
     }
