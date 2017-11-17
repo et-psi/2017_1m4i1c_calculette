@@ -29,14 +29,14 @@ namespace WpfCalculette
         {
             double dblNb1;
             double dblNb2;
-            double dblResponse;
+            double dblRes;
 
             if(double.TryParse(tbxNumber1.Text, out dblNb1))
             {
                 if(double.TryParse(tbxNumber2.Text, out dblNb2))
                 {
-                    dblResponse = dblNb1 + dblNb2;
-                    lblResponse.Content = dblResponse.ToString();
+                    dblRes = dblNb1 + dblNb2;
+                    lblResponse.Content = dblRes.ToString();
 
                 }
                 else
