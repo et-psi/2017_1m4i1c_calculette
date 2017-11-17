@@ -33,8 +33,16 @@ namespace WpfCalculette
 
             if(double.TryParse(tbxNumber1.Text, out dblNb1))
             {
+                if(double.TryParse(tbxNumber2.Text, out dblNb2))
+                {
                     dblResponse = dblNb1 + dblNb2;
                     lblResponse.Content = dblResponse.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please control input..");
+                }
             }
             else
             {
