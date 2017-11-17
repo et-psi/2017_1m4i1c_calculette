@@ -27,15 +27,27 @@ namespace WpfCalculette
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            double dblNumber1;
-            double dblNumber2;
-            double dblResponse;
+            double dblNb1;
+            double dblNb2;
+            double dblRes;
 
-            dblNumber1 = Convert.ToInt32(tbxNumber1.Text);
-            dblNumber2 = Convert.ToInt32(tbxNumber2.Text);
+            if(double.TryParse(tbxNumber1.Text, out dblNb1))
+            {
+                if(double.TryParse(tbxNumber2.Text, out dblNb2))
+                {
+                    dblRes = dblNb1 + dblNb2;
+                    lblResponse.Content = dblRes.ToString();
 
-            dblResponse = dblNumber1 + dblNumber2;
-            lblResponse.Content = dblResponse.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please control input..");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please control input..");
+            }
         }
     }
 }
